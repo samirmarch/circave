@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Circave</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #020024, #020b3d, #021b5c);
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: bgMove 10s ease infinite alternate;
+    }
+
+    @keyframes bgMove {
+      0% { background-position: left; }
+      100% { background-position: right; }
+    }
+
+    header {
+      width: 100%;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(6px);
+    }
+
+    header h1 {
+      font-size: 26px;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: #cfd8ff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 16px;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0;
+      height: 2px;
+      background: #4da3ff;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #4da3ff;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px;
+      animation: fadeIn 2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    main h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+      color: #e6ecff;
+    }
+
+    main p {
+      font-size: 18px;
+      max-width: 600px;
+      line-height: 1.6;
+      color: #c7d2ff;
+    }
+
+    section.social {
+      margin-top: 30px;
+    }
+
+    .social a {
+      display: inline-block;
+      margin: 10px 15px;
+      padding: 12px 22px;
+      border: 1px solid #4da3ff;
+      border-radius: 30px;
+      color: #4da3ff;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .social a:hover {
+      background: #4da3ff;
+      color: #020024;
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 10px 20px rgba(77, 163, 255, 0.4);
+    }
+
+    footer {
+      width: 100%;
+      padding: 15px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.4);
+      font-size: 14px;
+      color: #b8c3ff;
+    }
+
+    footer span {
+      color: #4da3ff;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Circave</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#social">Social Media</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <h2>Welcome to Circave</h2>
+    <p>
+      Circave is a modern, animated website with a dark blue theme.
+      It is designed to look clean, smooth, and professional.
+    </p>
+
+    <section class="social" id="social">
+      <a href="https://x.com/samir_march" target="_blank">X.com</a>
+      <a href="https://instagram.com/samirmarch.info" target="_blank">Instagram</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      This website is <span>for sale</span>. Please contact us via email:
+      <strong>contact@circave.com</strong>
+    </p>
+  </footer>
+
+</body>
+</html>
